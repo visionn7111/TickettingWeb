@@ -9,7 +9,7 @@
     <meta name="author" content="Tooplate">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>ArtXibition HTML Event Template</title>
+    <title>ArtXibition Ticket Detail Page</title>
 
 
     <!-- Additional CSS Files -->
@@ -59,9 +59,9 @@ https://www.tooplate.com/view/2125-artxibition
             </div>
         </div>
     </div>
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+
+   <!-- ***** Header Area Start ***** -->
+   <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -88,153 +88,108 @@ https://www.tooplate.com/view/2125-artxibition
     </header>
     <!-- ***** Header Area End ***** -->
 
-    
-    <!-- *** Venues & Tickets ***-->
-    <div class="venue-tickets">
-        <div class="container-fluid">
+
+  
+
+    <!-- ***** About Us Page ***** -->
+    <div class="page-heading-shows-events">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-heading">
-                        <h2>스포츠</h2>
+                    <h2>Tickets On Sale Now!</h2>
+                    <span>Check out upcoming and past shows & events and grab your ticket right now.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
+// MySQL 데이터베이스 연결 정보
+$servername = "localhost";
+$username = "root";
+$password = "tjrwls0802";
+$dbname = "ticket";
+
+// 데이터베이스 연결 생성
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// 연결 확인
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// ticket_id 값 가져오기
+$ticket_id = $_GET['ticket_id'];
+
+// ticket_id에 해당하는 티켓 정보 가져오기
+$sql = "SELECT * FROM ticket_information WHERE ticket_id = $ticket_id";
+$result = $conn->query($sql);
+
+// event_name 초기화
+$event_name = '';
+$event_date = '';
+$event_photo = '';
+$event_cost = '';
+$event_description = '';
+
+if ($result->num_rows > 0) {
+    // 데이터가 있는 경우
+    $row = $result->fetch_assoc();
+    $event_name = $row['event_name'];
+    $event_date = $row['event_date'];
+    $event_photo = $row['event_photo'];
+    $event_cost = $row['event_cost'];
+    $event_description = $row['event_description'];
+} else {
+    $event_name = 'Event not found';
+}
+
+// 데이터베이스 연결 종료
+$conn->close();
+?>
+
+
+
+
+    <div class="ticket-details-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="left-image">
+                        <img src=<?php echo htmlspecialchars($event_photo); ?> alt="">
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k1.png" alt="">
-                        </div>
-                        <div class="down-content">
+                    <div class="right-content">
+                        <h4><?php echo htmlspecialchars($event_name); ?></h4>
+                        <span>240 Tickets still available</span>
+                        <ul>
+                            <li><i class="fa fa-clock-o"></i> Thursday 18:00 to 22:00</li>
+                            <li><i class="fa fa-map-marker"></i>Copacabana Beach, Rio de Janeiro</li>
+                        </ul>
+                        <div class="quantity-content">
                             <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
-                                </div>
+                                <h6>Standard Ticket</h6>
+                                <p>$65 per ticket</p>
                             </div>
                             <div class="right-content">
-                                <h4>토트넘</h4>
-                                <p>대한민국 캡틴! 손흥민의 팀<br>토트넘 훗스퍼의 경기</p>
-                                
-                               
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$45</em></span>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k2.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
                                 </div>
                             </div>
-                            <div class="right-content">
-                                <h4>맨시티</h4>
-                                <p>지상최강의 팀!<br>맨체스터 시티의 경기</p>
-                                
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$55</em></span>
-                                </div>
-                            </div> 
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k3.png" alt="">
+                        <div class="total">
+                            <h4>Total: $210.00</h4>
+                            <div class="main-dark-button"><a href="#">Purchase Tickets</a></div>
                         </div>
-                        <div class="down-content">
-                            <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
-                                </div>
-                            </div>
-                            <div class="right-content">
-                                <h4>아스날</h4>
-                                <p>2위 그만할래!<br>아스널의 경기</p>
-                              
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$65</em></span>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k7.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
-                                </div>
-                            </div>
-                            <div class="right-content">
-                                <h4>맨체스터 유나이티드</h4>
-                                <p>토트넘 게섰거라<br>맨체스터 유나이티드의 경기</p>
-                                
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$55</em></span>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k5.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
-                                </div>
-                            </div>
-                            <div class="right-content">
-                                <h4>리버풀</h4>
-                                <p>맨시티의 라이벌!<br>리버풀의 경기</p>
-                               
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$55</em></span>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="venue-item">
-                        <div class="thumb">
-                            <img src="assets/images/k6.png" alt="">
-                        </div>
-                        <div class="down-content">
-                            <div class="left-content">
-                                <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
-                                </div>
-                            </div>
-                            <div class="right-content">
-                                <h4>버밍엄</h4>
-                                <p>떠오르는 다크호스<br>버밍엄의 경기</p>
-                                
-                                <div class="price">
-                                    <span>1 ticket<br>from <em>$55</em></span>
-                                </div>
-                            </div> 
+                        <div class="warn">
+                            <p>*You Can Only Buy 10 Tickets For This Show</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
 
     <!-- *** Subscribe *** -->
@@ -299,10 +254,10 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="col-lg-12">
                     <div class="under-footer">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6">
+                            <div class="col-lg-6">
                                 <p>São Conrado, Rio de Janeiro</p>
                             </div>
-                            <div class="col-lg-6 col-sm-6">
+                            <div class="col-lg-6">
                                 <p class="copyright">Copyright 2021 ArtXibition Company 
                     
                     			<br>Design: <a rel="nofollow" href="https://www.tooplate.com" target="_parent">Tooplate</a></p>
@@ -343,6 +298,8 @@ https://www.tooplate.com/view/2125-artxibition
             </div>
         </div>
     </footer>
+    
+    
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
@@ -359,9 +316,11 @@ https://www.tooplate.com/view/2125-artxibition
     <script src="assets/js/mixitup.js"></script> 
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/quantity.js"></script>
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
   </body>
+
 </html>

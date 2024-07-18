@@ -67,7 +67,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">안전한<em>놀이터</em></a>
+                        <a href="index.html" class="logo">Intra<em>park</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
@@ -88,6 +88,25 @@ https://www.tooplate.com/view/2125-artxibition
     </header>
     <!-- ***** Header Area End ***** -->
 
+    <?php
+// MySQL 데이터베이스 연결 정보
+$servername = "localhost";
+$username = "root";
+$password = "tjrwls0802";
+$dbname = "ticket";
+
+// 데이터베이스 연결 생성
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// 연결 확인
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+
+// 데이터베이스 연결 종료
+$conn->close();
+?>          
     
     <!-- *** Venues & Tickets ***-->
     <div class="venue-tickets">
@@ -106,7 +125,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="concert-ticket-details.php?ticket_id=1">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -129,7 +148,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="ticket-details.php?id=2">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
