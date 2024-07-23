@@ -71,9 +71,9 @@ https://www.tooplate.com/view/2125-artxibition
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="musical.html" class="active">뮤지컬</a></li>
-                            <li><a href="concert.html">콘서트</a></li>
-                            <li><a href="sports.html">스포츠</a></li>
+                            <li><a href="musical.php" class="active">뮤지컬</a></li>
+                            <li><a href="concert.php">콘서트</a></li>
+                            <li><a href="sports.php">스포츠</a></li>
                             <li><a href="shows-events.html">랭킹</a></li> 
                             <li><a href="tickets.html">마이페이지</a></li> 
                         </ul>        
@@ -106,7 +106,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.php">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=7">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -129,7 +129,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=8">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -151,7 +151,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=9">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -173,7 +173,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=10">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -195,7 +195,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=11">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">
@@ -217,7 +217,7 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="down-content">
                             <div class="left-content">
                                 <div class="main-white-button">
-                                    <a href="ticket-details.html">Purchase Tickets</a>
+                                    <a href="performance_detail.php?performance_id=12">Purchase Tickets</a>
                                 </div>
                             </div>
                             <div class="right-content">

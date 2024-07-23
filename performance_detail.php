@@ -71,9 +71,9 @@ https://www.tooplate.com/view/2125-artxibition
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="musical.html" class="active">뮤지컬</a></li>
-                            <li><a href="concert.html">콘서트</a></li>
-                            <li><a href="sports.html">스포츠</a></li>
+                            <li><a href="musical.php" class="active">뮤지컬</a></li>
+                            <li><a href="concert.php">콘서트</a></li>
+                            <li><a href="sports.php">스포츠</a></li>
                             <li><a href="shows-events.html">랭킹</a></li> 
                             <li><a href="tickets.html">마이페이지</a></li> 
                         </ul>        
@@ -118,14 +118,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// ticket_id 값 가져오기
-$ticket_id = $_GET['ticket_id'];
+// performance_id 값 가져오기
+$performance_id = $_GET['performance_id'];
 
-// ticket_id에 해당하는 티켓 정보 가져오기
-$sql = "SELECT * FROM ticket_information WHERE ticket_id = $ticket_id";
+// performance_id에 해당하는 티켓 정보 가져오기
+$sql = "SELECT * FROM performance_information WHERE performance_id = $performance_id";
 $result = $conn->query($sql);
 
 // event_name 초기화
+
 $event_name = '';
 $event_date = '';
 $event_photo = '';
@@ -140,6 +141,7 @@ if ($result->num_rows > 0) {
     $event_photo = $row['event_photo'];
     $event_cost = $row['event_cost'];
     $event_description = $row['event_description'];
+    
 } else {
     $event_name = 'Event not found';
 }
@@ -162,29 +164,31 @@ $conn->close();
                 <div class="col-lg-4">
                     <div class="right-content">
                         <h4><?php echo htmlspecialchars($event_name); ?></h4>
-                        <span>240 Tickets still available</span>
+                        <span>ticket information</span>
                         <ul>
-                            <li><i class="fa fa-clock-o"></i> Thursday 18:00 to 22:00</li>
-                            <li><i class="fa fa-map-marker"></i>Copacabana Beach, Rio de Janeiro</li>
+                            <li><i class="fa fa-clock-o"></i> 24-07-18 Thursday 18:00 to 22:00</li>
+                            <li><i class="fa fa-map-marker"></i> E9 308, CBNU</li>
                         </ul>
                         <div class="quantity-content">
                             <div class="left-content">
                                 <h6>Standard Ticket</h6>
-                                <p>$65 per ticket</p>
+                                <p>$<?php echo htmlspecialchars($event_cost); ?>per ticket</p>
                             </div>
                             <div class="right-content">
                                 <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
                                 </div>
                             </div>
                         </div>
                         <div class="total">
-                            <h4>Total: $210.00</h4>
-                            <div class="main-dark-button"><a href="#">Purchase Tickets</a></div>
-                        </div>
-                        <div class="warn">
-                            <p>*You Can Only Buy 10 Tickets For This Show</p>
-                        </div>
+    <h4>Total: $<?php echo htmlspecialchars($event_cost); ?></h4>
+    <div class="main-dark-button">
+        <a href="purchase_ticket.php?performance_id=<?php echo htmlspecialchars($performance_id); ?>">Purchase Tickets</a>
+    </div>
+</div>
+<div class="warn">
+    <!-- 경고 메시지나 추가 정보가 필요할 경우 여기에 추가하세요. -->
+</div>
                     </div>
                 </div>
             </div>
@@ -269,29 +273,20 @@ $conn->close();
                     <div class="sub-footer">
                         <div class="row">
                             <div class="col-lg-3">
-                                <div class="logo"><span>Art<em>Xibition</em></span></div>
+                                <div class="logo"><span>Intra<em>net</em></span></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="menu">
                                     <ul>
                                         <li><a href="index.html" class="active">Home</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="rent-venue.html">Rent Venue</a></li>
-                                        <li><a href="shows-events.html">Shows & Events</a></li> 
-                                        <li><a href="tickets.html">Tickets</a></li> 
+                                        <li><a href="musical.php">뮤지컬</a></li>
+                                        <li><a href="concert.php">콘서트</a></li>
+                                        <li><a href="sports.php">스포츠</a></li> 
+                                        <li><a href="tickets.html">랭킹</a></li> 
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="social-links">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+        
                         </div>
                     </div>
                 </div>
