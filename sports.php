@@ -67,7 +67,11 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
+<<<<<<< HEAD:sports.php
                         <a href="index.html" class="logo">Intra<em>net</em></a>
+=======
+                        <a href="index.html" class="logo">Intra<em>park</em></a>
+>>>>>>> 8a6af0c3e3d6226f6ab6d43319e31efa98fcc275:sports.html
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
