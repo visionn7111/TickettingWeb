@@ -1,7 +1,7 @@
 <div align="center">
-  
-# 🦁KDT 1팀🐯
-# KT클라우드와 NHN Cloud로 완성하는 클라우드 엔지니어 양성 2차 프로젝트
+
+# 🎫NHN 클라우드를 활용한 IaaS 티켓팅 웹 서비스🎫  
+## KT클라우드와 NHN Cloud로 완성하는 클라우드 엔지니어 양성 2차 프로젝트 🦁KDT 1팀🐯
 <h1>📚STACKS</h1>
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
