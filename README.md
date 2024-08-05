@@ -1,51 +1,49 @@
+<div align="center">
+  
 # KDT 1팀 
 # KT클라우드와 NHN Cloud로 완성하는 클라우드 엔지니어 양성 2차 프로젝트
 # STACKS
-클라우드
-
-DB
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-백엔드
-
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-
-협업 툴
 
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+</div>
 
 # 팀원 구성
-# 팀원 구성
 
-| <img src="https://avatars.githubusercontent.com/u/169283479?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105273042?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/123456789?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/987654321?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/112233445?v=4" width="150" height="150"/> |
-|:-:|:-:|:-:|:-:|:-:|
-| [@visionn7111](https://github.com/visionn7111) | [@taebong113](https://github.com/taebong113) | [@goodniceboy](https://github.com/goodniceboy) | [@exampleuser2](https://github.com/exampleuser2) | [@exampleuser3](https://github.com/exampleuser3) |
-
-
+| 김영권     | 이태민    | 강석진   | 양현수    | 주상민   |
+|--------------|--------------|--------------|--------------|--------------|
+| <img src="https://avatars.githubusercontent.com/u/169283479?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105273042?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105378841?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/110795226?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/112233445?v=4" width="150" height="150"/> |
+| [@visionn7111](https://github.com/visionn7111) | [@taebong113](https://github.com/taebong113) | [@goodniceboy](https://github.com/goodniceboy) | [@Dkdneidi](https://github.com/Dkdneidi) | [@exampleuser3](https://github.com/exampleuser3) |
 
 
-## 개요
-<img width="1430" alt="스크린샷 2024-08-05 오전 10 37 37" src="https://github.com/user-attachments/assets/a0bdffcf-833e-461f-a767-48ea6711b7d8">
-
-클라우드를 이용한 티켓팅 웹 서비스, 사용자가 뮤지컬, 콘서트, 스포츠 등의 다양한 이벤트 티켓을 구매할 수 있는 플랫폼 입니다.
-사용자는 원하는 이벤트의 좌석을 선택하고, 로그인 후 구매할 수 있습니다. 마이페이지에서는 구매한 티켓을 확인 할 수 있습니다.
-
-
-
+# 역할분담
+- **김영권(보안)** : 웹 애플리케이션 방화벽(WAF) 구축, 웹 로그인 기능 구현, 웹 메인페이지 구현
+- **이태민(클라우드)** : 클라우드 아키텍처 설계 및 구축, 로드밸런싱 구현, 웹 서버, 데이터베이스 구축 및 운영
+- **강석진(백엔드)** : 백엔드, 좌석 예약 API 구현
+- **양현수(서버)** : 클라우드 환경을 고려한 On-premise 환경 설정 및 준비, VPN 구현
+- **주상민(서버)** : 클라우드 환경을 고려한 On-premise 환경 설정 및 준비, VPN 구현
 
 
+## 1. 프로젝트 소개
+이 프로젝트는 다양한 이벤트 티켓을 온라인으로 구매할 수 있는 웹 플랫폼입니다. 사용자는 뮤지컬, 콘서트, 스포츠 등 다양한 이벤트에 대한 티켓을 손쉽게 예약하고 관리할 수 있습니다.
 
+### 주요 기능
+- **이벤트 탐색**: 다양한 뮤지컬, 콘서트, 스포츠 등의 이벤트를 탐색하고 정보를 확인할 수 있습니다.
+- **좌석 선택 및 예약**: 원하는 이벤트의 좌석을 선택하고, 실시간으로 예약할 수 있습니다.
+- **로그인 및 구매**: 사용자 계정을 통해 로그인 후 안전하게 티켓을 구매할 수 있습니다.
+- **마이페이지**: 구매한 티켓을 확인하고 관리할 수 있는 개인화된 마이페이지를 제공합니다.
 
-
-# 간트 차트
+## 2. 간트 차트
 <img width="1420" alt="스크린샷 2024-08-05 오전 10 34 40" src="https://github.com/user-attachments/assets/5a8bfdae-32d0-433f-a3b4-1ba35f7653b8">
 
 
 
 
-# 클라우드 인프라 구조도
+## 3. 클라우드 인프라 구조도
 <img width="1047" alt="스크린샷 2024-08-05 오전 9 49 22" src="https://github.com/user-attachments/assets/826f0327-151f-4b2f-8504-b7efddd69fcc">
 
 
@@ -100,7 +98,43 @@ DB
   </p>
 </details>
 
+## 4. 페이지 기능
+### [초기 화면]
+<img width="1397" alt="스크린샷 2024-08-05 오전 11 13 11" src="https://github.com/user-attachments/assets/2a5884bd-6424-4872-9443-ad3aa83e56aa">
 
+- 뮤지컬, 콘서트, 스포트 카테고리로 나누어지며 원하는 장르 페이지를 선택할 수 있습니다.
+### [회원 가입 화면]
+<img width="1019" alt="스크린샷 2024-08-05 오전 11 19 31" src="https://github.com/user-attachments/assets/034ab933-db18-4c06-8e41-a7786504617c">
+- 회원 가입을 할 수 있습니다.
+
+### [로그인 화면]
+<img width="745" alt="스크린샷 2024-08-05 오전 11 20 46" src="https://github.com/user-attachments/assets/63014b25-fd13-4a9e-b653-10504b011bb8">
+- 로그인을 할 수 있습니다.
+
+
+### [로그인 성공 화면]
+<img width="1200" alt="스크린샷 2024-08-05 오전 11 22 39" src="https://github.com/user-attachments/assets/edf8521c-7e3f-4aeb-ab46-98d5cfc6cdcd">
+
+### [카테고리 뮤지컬 화면]
+<img width="1209" alt="스크린샷 2024-08-05 오전 11 24 07" src="https://github.com/user-attachments/assets/27f88d1a-5e73-4ff9-9b5c-deb1a3da1369">
+
+- 공연에 대한 정보가 출력되고 원하는 공연을 선택할 수 있습니다.
+
+### [티켓 구매 화면]
+<img width="1212" alt="스크린샷 2024-08-05 오전 11 24 51" src="https://github.com/user-attachments/assets/3c4875ee-0190-43d0-828e-bbb90b2f7f45">
+
+- 선택한 티켓에 대한 장소, 가격, 구매할 티켓 수를 결정할 수 있습니다.
+
+### [좌석 선택 화면]
+<img width="1265" alt="스크린샷 2024-08-05 오전 11 18 11" src="https://github.com/user-attachments/assets/2db50bc1-e02c-413f-a58d-89e0a5f4b1a2">
+
+- 좌석을 선택할 수 있습니다.
+
+### [예약 성공 화면]
+<img width="1054" alt="스크린샷 2024-08-05 오전 11 23 20" src="https://github.com/user-attachments/assets/bf185099-cdc3-4710-ae2b-e22b714d5325">
+
+### [마이페이지]
+<img width="1215" alt="스크린샷 2024-08-05 오전 11 23 45" src="https://github.com/user-attachments/assets/dca6db34-776c-4f65-82bc-673b899363e9">
 
 
 
