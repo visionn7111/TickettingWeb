@@ -112,30 +112,6 @@
 ### Subnet 구성
 
 ### 인스턴스 구성
-#### Web 1
-<ul>
-  <li>OS : CentOS 7.9</li>
-</ul>
-
-#### Web 2
-<ul>
-  <li>OS : Unbuntu Server 20.04 LTS</li>
-</ul>
-
-#### mgmt-server
-<ul>
-  <li>OS : CentOS 7.9</li>
-</ul>
-
-#### was 1
-<ul>
-  <li>OS : CentOS 7.9</li>
-</ul>
-
-#### WAF
-<ul>
-  <li>OS : CentOS 7.9</li>
-</ul>
 
 ### RDS 구성
 
@@ -144,25 +120,27 @@
 ### WAF 구성
 
 
-
-
-
 ## 6. 페이지 기능
 ### [초기 화면]
 <img width="1397" alt="스크린샷 2024-08-05 오전 11 13 11" src="https://github.com/user-attachments/assets/2a5884bd-6424-4872-9443-ad3aa83e56aa">
 
 - 뮤지컬, 콘서트, 스포트 카테고리로 나누어지며 원하는 장르 페이지를 선택할 수 있습니다.
+
 ### [회원 가입 화면]
 <img width="1019" alt="스크린샷 2024-08-05 오전 11 19 31" src="https://github.com/user-attachments/assets/034ab933-db18-4c06-8e41-a7786504617c">
+
 - 회원 가입을 할 수 있습니다.
 
 ### [로그인 화면]
 <img width="745" alt="스크린샷 2024-08-05 오전 11 20 46" src="https://github.com/user-attachments/assets/63014b25-fd13-4a9e-b653-10504b011bb8">
-- 로그인을 할 수 있습니다.
 
+- 로그인을 할 수 있습니다.
 
 ### [로그인 성공 화면]
 <img width="1200" alt="스크린샷 2024-08-05 오전 11 22 39" src="https://github.com/user-attachments/assets/edf8521c-7e3f-4aeb-ab46-98d5cfc6cdcd">
+
+- 로그인을한 계정의 이름이 출력됩니다.
+- 메인페이지, 마이페이지 이동버튼으로 페이지 전환을 합니다.
 
 ### [카테고리 뮤지컬 화면]
 <img width="1209" alt="스크린샷 2024-08-05 오전 11 24 07" src="https://github.com/user-attachments/assets/27f88d1a-5e73-4ff9-9b5c-deb1a3da1369">
@@ -182,8 +160,13 @@
 ### [예약 성공 화면]
 <img width="1054" alt="스크린샷 2024-08-05 오전 11 23 20" src="https://github.com/user-attachments/assets/bf185099-cdc3-4710-ae2b-e22b714d5325">
 
+- 티켓 구매 결과가 출력됩니다.
+- 홈, 마이페이지 페이지 전환을 할 수 있습니다.
+
 ### [마이페이지]
 <img width="1215" alt="스크린샷 2024-08-05 오전 11 23 45" src="https://github.com/user-attachments/assets/dca6db34-776c-4f65-82bc-673b899363e9">
+
+- 구매한 티켓의 정보를 확인할 수 있습니다.
 
 
 
