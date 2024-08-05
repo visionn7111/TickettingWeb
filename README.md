@@ -16,8 +16,8 @@
 
 | 김영권     | 이태민    | 강석진   | 양현수    | 주상민   |
 |--------------|--------------|--------------|--------------|--------------|
-| <img src="https://avatars.githubusercontent.com/u/169283479?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105273042?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105378841?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/110795226?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/112233445?v=4" width="150" height="150"/> |
-| [@visionn7111](https://github.com/visionn7111) | [@taebong113](https://github.com/taebong113) | [@goodniceboy](https://github.com/goodniceboy) | [@Dkdneidi](https://github.com/Dkdneidi) | [@exampleuser3](https://github.com/exampleuser3) |
+| <img src="https://avatars.githubusercontent.com/u/169283479?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105273042?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/105378841?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/110795226?v=4" width="150" height="150"/> | <img src="https://avatars.githubusercontent.com/u/158993111?v=4" width="150" height="150"/> |
+| [@visionn7111](https://github.com/visionn7111) | [@taebong113](https://github.com/taebong113) | [@goodniceboy](https://github.com/goodniceboy) | [@Dkdneidi](https://github.com/Dkdneidi) | [@sangmin310](https://github.com/sangmin310) |
 
 
 # 역할분담
@@ -98,7 +98,48 @@
   </p>
 </details>
 
-## 4. 페이지 기능
+## 4. 클라우드 구축 과정
+### VPC 구성
+
+### Subnet 구성
+
+### 인스턴스 구성
+#### Web 1
+<ul>
+  <li>OS : CentOS 7.9</li>
+</ul>
+
+#### Web 2
+<ul>
+  <li>OS : Unbuntu Server 20.04 LTS</li>
+</ul>
+
+#### mgmt-server
+<ul>
+  <li>OS : CentOS 7.9</li>
+</ul>
+
+#### was 1
+<ul>
+  <li>OS : CentOS 7.9</li>
+</ul>
+
+#### WAF
+<ul>
+  <li>OS : CentOS 7.9</li>
+</ul>
+
+### RDS 구성
+
+### 로드밸런싱 구성
+
+### WAF 구성
+
+
+
+
+
+## 5. 페이지 기능
 ### [초기 화면]
 <img width="1397" alt="스크린샷 2024-08-05 오전 11 13 11" src="https://github.com/user-attachments/assets/2a5884bd-6424-4872-9443-ad3aa83e56aa">
 
