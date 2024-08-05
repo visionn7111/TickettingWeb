@@ -1,18 +1,25 @@
 <div align="center">
   
-# KDT 1팀 
+# 🦁KDT 1팀🐯
 # KT클라우드와 NHN Cloud로 완성하는 클라우드 엔지니어 양성 2차 프로젝트
-# STACKS
+<h1>📚STACKS</h1>
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Cent OS](https://img.shields.io/badge/cent%20os-002260?style=for-the-badge&logo=centos&logoColor=F0F0F0)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 </div>
 
-# 팀원 구성
+# 👨‍💻팀원 구성
 
 | 김영권     | 이태민    | 강석진   | 양현수    | 주상민   |
 |--------------|--------------|--------------|--------------|--------------|
@@ -20,7 +27,7 @@
 | [@visionn7111](https://github.com/visionn7111) | [@taebong113](https://github.com/taebong113) | [@goodniceboy](https://github.com/goodniceboy) | [@Dkdneidi](https://github.com/Dkdneidi) | [@sangmin310](https://github.com/sangmin310) |
 
 
-# 역할분담
+# 🤸역할분담
 - **김영권(보안)** : 웹 애플리케이션 방화벽(WAF) 구축, 웹 로그인 기능 구현, 웹 메인페이지 구현
 - **이태민(클라우드)** : 클라우드 아키텍처 설계 및 구축, 로드밸런싱 구현, 웹 서버, 데이터베이스 구축 및 운영
 - **강석진(백엔드)** : 백엔드, 좌석 예약 API 구현
