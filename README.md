@@ -40,10 +40,11 @@
 ## 2. 간트 차트
 <img width="1420" alt="스크린샷 2024-08-05 오전 10 34 40" src="https://github.com/user-attachments/assets/5a8bfdae-32d0-433f-a3b4-1ba35f7653b8">
 
+## 3. 웹 요구사항 정의서
+![image](https://github.com/user-attachments/assets/f6b0b7b7-7099-48fb-b3f6-8d158670036c)
+![image](https://github.com/user-attachments/assets/f5b6f70d-3d59-42fc-b526-84e6d6f6fdfa)
 
-
-
-## 3. 클라우드 인프라 구조도
+## 4. 클라우드 인프라 구조도
 <img width="1047" alt="스크린샷 2024-08-05 오전 9 49 22" src="https://github.com/user-attachments/assets/826f0327-151f-4b2f-8504-b7efddd69fcc">
 
 
@@ -98,7 +99,7 @@
   </p>
 </details>
 
-## 4. 클라우드 구축 과정
+## 5. 클라우드 구축 과정
 ### VPC 구성
 
 ### Subnet 구성
@@ -139,7 +140,7 @@
 
 
 
-## 5. 페이지 기능
+## 6. 페이지 기능
 ### [초기 화면]
 <img width="1397" alt="스크린샷 2024-08-05 오전 11 13 11" src="https://github.com/user-attachments/assets/2a5884bd-6424-4872-9443-ad3aa83e56aa">
 
