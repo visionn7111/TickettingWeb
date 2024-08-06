@@ -160,7 +160,7 @@
 ### [좌석 선택 화면]
 <img width="1265" alt="스크린샷 2024-08-05 오전 11 18 11" src="https://github.com/user-attachments/assets/2db50bc1-e02c-413f-a58d-89e0a5f4b1a2">
 
-- 좌석을 선택할 수 있습니다.
+- 좌석을 선택할 수 있습니다. 계정당 한 공연의 좌석2개까지 예매할 수 있도록 설정하였습니다.
 
 ### [예약 성공 화면]
 <img width="1054" alt="스크린샷 2024-08-05 오전 11 23 20" src="https://github.com/user-attachments/assets/bf185099-cdc3-4710-ae2b-e22b714d5325">
