@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticketing-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ticketing-web
+  template:
+    metadata:
+      labels:
+        app: ticketing-web
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret  # 여기서 imagePullSecrets 위치를 수정
+      containers:
+      - name: ticketing-web
+        image: hackk7111/ticketing-web:latest
+        ports:
+        - containerPort: 80
