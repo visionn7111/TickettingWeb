@@ -1,8 +1,6 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USERNAME = 'hackk7111'
-        DOCKERHUB_PASSWORD = 'kimyk0604'
         IMAGE_NAME = 'ticketing-web'
         IMAGE_TAG = 'latest'
         REGISTRY = 'docker.io'
@@ -19,11 +17,12 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Docker 로그인
-                    sh "docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}"
-
-                    // Docker 이미지 빌드
-                    sh "docker build -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} ."
+                    // Docker 로그인 (크리덴셜을 사용)
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
+                        // Docker 이미지 빌드
+                        sh "docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}"
+                        sh "docker build -t ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} ."
+                    }
                 }
             }
         }
