@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: your-app
-        image: <your-dockerhub-username>/<your-app-name>:latest
+        image: acrproject.azurecr.io/web-app:latest  # ACR 이미지 주소
         ports:
         - containerPort: 80
       imagePullSecrets:
-      - name: dockerhub-secret
+      - name: acr-secret  # 생성한 시크릿 이름
