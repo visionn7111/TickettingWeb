@@ -11,8 +11,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     && apt-get clean
 
-# GitHub에서 리포지토리 클론
-RUN git clone https://github.com/visionn7111/TickettingWeb /var/www/html
+# /var/www/html 디렉토리를 비운 후 GitHub에서 리포지토리 클론
+RUN rm -rf /var/www/html/* && \
+    git clone https://github.com/visionn7111/TickettingWeb /var/www/html
 
 # Apache 설정
 RUN chown -R www-data:www-data /var/www/html && \
