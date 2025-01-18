@@ -4,7 +4,7 @@ pipeline {
         REGISTRY = "acrproject.azurecr.io"  // ACR 주소
         IMAGE_NAME = "web-app"             // Docker 이미지 이름
         DOCKER_IMAGE = "${REGISTRY}/${IMAGE_NAME}:latest"
-        KUBE_CONFIG = credentials('kube-config')  // Jenkins에 저장된 kubeconfig 크리덴셜 ID
+        KUBE_CONFIG = credentials('config')  // Jenkins에 저장된 kubeconfig 크리덴셜 ID (이름을 config로 변경)
     }
     stages {
         stage('Clone Repository') {
@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy to AKS') {
             steps {
                 // AKS에 배포
-                withKubeConfig(credentialsId: 'kube-config') {
+                withEnv(["KUBECONFIG=${KUBE_CONFIG}"]) {
                     sh """
                     kubectl set image deployment/web-app web-app=${DOCKER_IMAGE}
                     kubectl rollout status deployment/web-app
