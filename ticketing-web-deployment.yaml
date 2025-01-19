@@ -16,6 +16,6 @@ spec:
         - name: azure-acr-secret  # ACR에 대한 이미지 풀 시크릿
       containers:
       - name: ticketing-web
-        image: <your-acr-name>.azurecr.io/ticketing-web:latest  # ACR 이미지 주소
+        image: acrproject.azurecr.io/ticketing-web:latest  # ACR 이미지 주소
         ports:
         - containerPort: 80
