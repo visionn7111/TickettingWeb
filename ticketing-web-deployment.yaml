@@ -13,9 +13,9 @@ spec:
         app: ticketing-web
     spec:
       imagePullSecrets:
-        - name: dockerhub-secret  # 여기서 imagePullSecrets 위치를 수정
+        - name: azure-acr-secret  # ACR에 대한 이미지 풀 시크릿
       containers:
       - name: ticketing-web
-        image: hackk7111/ticketing-web:latest
+        image: <your-acr-name>.azurecr.io/ticketing-web:latest  # ACR 이미지 주소
         ports:
         - containerPort: 80
